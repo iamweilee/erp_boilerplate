@@ -1,0 +1,67 @@
+@import "./mixin.less";
+
+.error-page  {
+  position: absolute;
+  width: 100%;
+  height: 458px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  background: none;
+
+  &-content {
+    .align-middle;
+    width: 400px;
+    height: 350px;
+    text-align: center;
+
+    &-image {
+      width: 100%;
+      height: 250px;
+
+      &.resource-empty {
+        background: url('../img/resource_empty.png') no-repeat center center;
+      }
+
+      &.notfound-empty {
+        background: url('../img/404.png') no-repeat center center;
+      }
+
+      &.system-error {
+        background: url('../img/500.png') no-repeat center center;
+      }
+
+      &.unauth {
+        background: url('../img/unauth.png') no-repeat center center;
+        height: 180px;
+      }
+
+      &.search-empty {
+        background: url('../img/search_empty.png') no-repeat center center;
+        height: 70px;
+      }
+
+      &.list-empty {
+        background: url('../img/list_empty.png') no-repeat center center;
+        height: 70px;
+      }
+
+    }
+
+    &-label {
+      color: #666;
+      line-height: 60px;
+    }
+
+    &-button {
+      margin: 0 10px;
+    }
+
+    &-thumb-image {
+      width: 96px;
+      height: 72px;
+    }
+  }
+}

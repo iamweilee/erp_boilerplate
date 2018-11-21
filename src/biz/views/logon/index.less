@@ -1,0 +1,335 @@
+.account-wrap {
+  width: 100%;
+  height: 100%;
+  padding-top: 88px;
+  background: #fff url("./bgimg.jpg") no-repeat top center;
+  background-size: 100%;
+
+  .mb-16 {
+    margin-bottom: 16px;
+  }
+  .mb-36 {
+    margin-bottom: 36px;
+  }
+  .ant-form {
+    position: relative;
+    p.account-error-row {
+      position: absolute;
+      left: 0;
+      top: -33px;
+      height: 30px;
+      width: 100%;
+      padding: 0 12px;
+      margin: 0;
+      line-height: 30px;
+      background: #fdeded;
+      color: #333;
+      font-size: 12px;
+      border-radius: 2px;
+      text-align: left;
+    }
+  }
+
+  &.logon-wrapper {
+    height: 100%;
+    min-height: 550px;
+    position: relative;
+    .logon-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h2 {
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+    }
+
+    .account-footer {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .account-footer {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    color: #333;
+    text-align: center;
+    .iconfont{
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .footer-police {
+      padding-left: 20px;
+      background: url("./police.png") no-repeat;
+      color:#333;
+      line-height: 20px;
+      display: inline-block;
+    }
+  }
+
+  .logon-form {
+    margin: 0 auto;
+    width: 420px;
+    height: auto;
+    padding: 32px 40px;
+    background: #fff;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .08);
+    line-height: 1.5;
+
+    p.error {
+      margin: 3px 0;
+      height: 30px;
+      line-height: 30px;
+      background: #fdeded;
+      color: #333;
+      font-size: 12px;
+      text-align: left;
+      padding-left: 14px;
+      .icon-error {
+        margin-right: 13px;
+      }
+    }
+
+    .ant-form-explain {
+      position: absolute;
+      left: 0;
+      margin-left: 0;
+      bottom: -20px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .external-link {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .err-row {
+      margin-bottom: 6px;
+    }
+
+    .ant-form {
+      padding: 0;
+      .ant-form-item-control {
+        width: 100%;
+        .ant-input {
+          width: 100%;
+          height: 40px;
+          border-radius: 2px;
+          border: 1px solid #999;
+        }
+      }
+    }
+
+    .captcha-img {
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      width: 72px;
+      height: 26px;
+    }
+
+    .form-a-code {
+      position: absolute;
+      right: 10px;
+      line-height: 40px;
+      font-size: 12px;
+      color: #008bec;
+      cursor: pointer;
+      &.disable {
+        color: #999;
+        cursor: default;
+      }
+    }
+
+    .forget-a {
+      float: right;
+      cursor: pointer;
+      color: #008bec;
+    }
+
+    /*注册登陆按钮*/
+    .ant-btn-primary {
+      height: 48px;
+      background: #008bec;
+      span {
+        font-size: 16px;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+
+    p {
+      color: rgb(204, 204, 204);
+      text-align: center;
+      margin-top: 16px;
+
+      span {
+        &:first-child {
+          margin-right: 16px;
+        }
+      }
+      &.logon-register {
+        color: #666;
+        a {
+          color: #008bec;
+        }
+      }
+    }
+  }
+}
+
+//重写modal
+.account-modal {
+  .mt-15 {
+    margin-top: 15px;
+  }
+  .mt-8 {
+    margin-top: 8px;
+  }
+  .ant-modal {
+    width: 360px !important;
+    .ant-modal-header {
+      padding: 24px 21px 16px 21px;
+      text-align: left;
+      .ant-modal-title {
+        font-size: 16px;
+        color: #333;
+      }
+    }
+    .ant-modal-close-x {
+      font-size: 20px;
+    }
+    .ant-modal-body {
+      padding: 0 24px;
+      p.desc {
+        margin-bottom: 10px;
+        height: 20px;
+        line-height: 20px;
+        color: #999;
+        font-size: 12px;
+        .anticon {
+          vertical-align: text-bottom;
+          margin-right: 4px;
+        }
+      }
+
+      .ant-steps {
+        width: 66%;
+        .ant-steps-tail {
+          i {
+            background: transparent;
+            border-bottom: 1px dashed #e1e1e1;
+          }
+        }
+        .ant-steps-head {
+          margin-top: 2px;
+        }
+        .ant-steps-head-inner {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          line-height: 13px;
+          background: #e1e1e1;
+          border-color: #e1e1e1;
+          color: #666;
+        }
+        .ant-steps-item.ant-steps-status-process {
+          .ant-steps-head-inner {
+            border-color: #008bec;
+            background-color: #008bec;
+          }
+        }
+        .ant-steps-item.ant-steps-status-finish {
+          .ant-steps-head-inner {
+            border-color: #008bec;
+            background-color: #fff;
+          }
+        }
+        .ant-steps-title {
+          margin-bottom: 0;
+          color: #666;
+          font-weight: normal;
+        }
+      }
+    }
+    .ant-form-item {
+      .ant-col-xs-6 {
+        width: 25%;
+      }
+      .ant-col-sm-6 {
+        width: 25%;
+      }
+      .ant-col-xs-18 {
+        width: 75%;
+      }
+      .ant-col-sm-18 {
+        width: 75%;
+      }
+
+    }
+    .ant-modal-footer {
+      padding: 8px 24px 24px 24px;
+      border-top: none;
+    }
+    .ant-form {
+      padding: 0;
+      .modal-form-8-16 {
+        .ant-form-item-label {
+          width: 33.33333%;
+        }
+
+      }
+      .ant-form-item-control {
+        width: 100%;
+        .ant-input {
+          width: 100%;
+        }
+      }
+      .captcha-img {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        width: 72px;
+        height: 26px;
+      }
+    }
+    .ant-form-explain {
+      position: absolute;
+      left: 0;
+      margin-left: 0;
+      bottom: -18px;
+    }
+    .ant-form-item-required:before {
+      content: '';
+    }
+    .ant-form-item-label label:after {
+      content: '';
+    }
+    .form-a-code {
+      position: absolute;
+      right: 10px;
+      line-height: 28px;
+      font-size: 12px;
+      color: #008bec;
+      cursor: pointer;
+      top: 0;
+
+      &.disable {
+        color: #999;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+ @import "../variable.less";
+
+.@{app-prefix-cls} {
+  .ant-table {
+
+    &-thead > tr,
+    &-tbody > tr {
+      > td {
+        padding: 8px 16px;
+      }
+
+      &.ant-table-row-hover,
+      &:hover {
+        & > td {
+          background: #F0F8FD;
+        }
+      }
+    }
+
+    &-thead > tr > th {
+      background: #fff;
+    }
+
+    &-body {
+      .ant-tag {
+        border: none;
+        background: none;
+        margin-right: 0;
+        height: 18px;
+
+        &-green {
+          color: #333;
+        }
+      }
+
+      .table-row-odd {
+        background: #fbfbfb;
+      }
+
+      .table-row-even {
+        background: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+/** --- 列表页样式 --- */
+@import "../../static/css/variable.less";
+@import "../../static/css/mixin.less";
+
+.@{app-prefix-cls} {
+  .list-page {
+    // 列表操作去
+    .list-action {
+      position: absolute;
+      top: -50px;
+      right: 20px;
+      .ant-btn {
+        margin-left: 8px;
+      }
+    }
+
+    // 列表筛选区
+    .list-filter-form {
+      background: #FBFBFB;
+      border-bottom: 1px solid #E1E1E1;
+      .ant-form {
+        padding: 12px 0px 12px 40px;
+        .ant-form-item,
+        .ant-form-item-with-help {
+          margin-bottom: 0;
+        }
+      }
+
+      .ant-form-item {
+      }
+
+      .ant-form-item-label {
+        width: auto;
+      }
+
+      .ant-input-number {
+        height: 29px;
+        input {
+          height: 27px;
+        }
+      }
+
+      .ant-select {
+        &-selection {
+          border: none;
+          background: none;
+        }
+
+        &&-open,
+        &&-focused,
+        &&:focus {
+          .ant-select-selection {
+            box-shadow: none;
+            color: @theme-primary-color;
+          }
+        }
+      }
+
+
+      .ant-cascader-picker {
+        background: none;
+        .ant-cascader-input {
+          width: 100%;
+          border: none;
+          background: none;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        &:focus .ant-cascader-input {
+          box-shadow: none;
+        }
+      }
+
+    }
+
+    // 列表结果区
+    .list-result {
+      background: #fff;
+      padding: 24px 40px;
+
+
+      .list-multi-select-result {
+        margin-bottom: 10px;
+        &-item {
+          display: inline-block;
+          margin-right: 10px;
+          cursor: pointer;
+
+          .anticon-close {
+            color: #CC3132;
+            margin-left: 5px;
+          }
+        }
+      }
+
+
+      .ant-card {
+        &-head {
+          padding: 0px;
+        }
+        &-body {
+          padding: 0px;
+        }
+      }
+
+      .ant-table {
+        &-thead {
+          * {
+            color: #666666;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+
+        &-body {
+          .ant-table-expand-icon-th, .ant-table-row-expand-icon-cell {
+            width: 17px;
+            min-height: 17px;
+          }
+
+          .ant-table-expanded-row,
+          .expanded-line {
+            &:hover {
+              & > td {
+                background: #F0F8FD;
+              }
+            }
+            background: #F0F8FD;
+          }
+
+          .ant-table-row .table-action {
+            padding-left: 8px;
+
+            button {
+              height: 18px;
+            }
+
+            a {
+              white-space: nowrap;
+              padding: 4px 8px;
+              margin: 0px;
+              span {
+                margin: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    .inner-warn-wrapper-content {
+      height: 250px;
+      position: relative;
+      top: 50px;
+      .warn-wrapper {
+        width: 400px;
+        height: 150px;
+      }
+    }
+  }
+}

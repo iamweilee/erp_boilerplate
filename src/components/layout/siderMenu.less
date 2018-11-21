@@ -1,0 +1,77 @@
+@import "../../static/css/variable.less";
+
+@menu-prefix-cls: ant-menu;
+
+.sider-menu {
+  .@{menu-prefix-cls} {
+    background-color: #fff;
+    color: #fff;
+
+    &.ant-menu-inline,
+    &.ant-menu-vertical {
+      border-right: none;
+
+      .ant-menu-item {
+        left: 0;
+
+        &:after {
+          content: '';
+          border-right: none;
+        }
+      }
+    }
+
+    .ant-menu-topmenu-title {
+      background: #fff;
+      color: #222;
+      font-size: 14px;
+      line-height: 42px;
+      height: 42px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      a {
+        color: #222;
+      }
+    }
+
+    .@{menu-prefix-cls}-item:active {
+      background: #fff;
+    }
+
+    .@{menu-prefix-cls}-item > a {
+      color: #7A7A7A;
+      font-size: 14px;
+      &:hover {
+        color: @theme-primary-color;
+      }
+    }
+
+    .ant-menu-submenu-title {
+      background: #fff;
+      color: #222;
+      font-size: 14px;
+      &:hover {
+        background: #fff;
+        color: @theme-primary-color;
+      }
+    }
+
+
+    .@{menu-prefix-cls}-item:hover,
+    .@{menu-prefix-cls}-item-active {
+      background-color: #fff;
+      color: @theme-primary-color;
+    }
+
+    &:not(@{menu-prefix-cls}-horizontal) .@{menu-prefix-cls}-item-selected {
+      background-color: #fff;
+      color: @theme-primary-color;
+      border-right: none;
+      font-size: 14px;
+      > a,
+      > a:hover {
+        color: @theme-primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../variable.less";
+.@{app-prefix-cls} {
+  .ant-calendar {
+    &-ym-select {
+      font-weight: 400 !important;
+      color: #333 !important;
+    }
+    &-picker {
+      width: 128px;
+
+      input {
+        width: 128px !important;
+      }
+    }
+
+    // 周日需要颜色
+    &-body tr {
+      th:last-child {
+        .ant-calendar-column-header-inner {
+          color: #FF6E40;
+        }
+      }
+    }
+
+    &-date {
+      &:hover {
+        background-color: #F0F8FD;
+        color: #333333;
+      }
+    }
+
+    &-input-wrap {
+      // border: 1px solid #7196ee;
+      // outline: 0;
+      // box-shadow: 0 0 0 2px rgba(68, 117, 232, 0.2);
+    }
+
+    &-tbody tr {
+      td:last-child {
+        .ant-calendar-date{
+          color: #FF6E40;
+        }
+      }
+
+      td.ant-calendar-selected-day {
+        .ant-calendar-date{
+          color: #fff;
+        }
+      }
+
+      td.ant-calendar-next-month-btn-day {
+        .ant-calendar-date{
+          color: rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+
+  }
+}

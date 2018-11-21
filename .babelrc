@@ -1,0 +1,29 @@
+{
+  "presets": ["es2015", "stage-0", "react"],
+  "plugins": [
+    [
+      "import", {
+        "libraryName": "antd",
+        "style": true
+      }
+    ],
+    "add-module-exports",
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-object-assign"
+  ],
+  "env": {
+    "production": {},
+    "development": {
+      "plugins": [
+        [
+          "dva-hmr", {
+            "container": "#app",
+            "quiet": false
+          }
+        ]
+      ]
+    }
+  },
+  "comments": false
+}

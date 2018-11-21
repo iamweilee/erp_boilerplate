@@ -1,0 +1,44 @@
+@import "../variable.less";
+
+.@{app-prefix-cls} {
+  .ant-select {
+    &-dropdown {
+      .ant-select-dropdown-menu-item {
+        &:hover,
+        &.ant-select-dropdown-menu-item-active {
+          background: #F0F8FD;
+          color: @theme-primary-color;
+        }
+
+        &.ant-select-dropdown-menu-item-selected {
+          background: #fff;
+          color: @theme-primary-color;
+        }
+      }
+    }
+
+    &-selection__placeholder, &-search__field__placeholder {
+      color: #7A7A7A;
+    }
+  }
+
+  .ant-cascader-menu {
+    height: 270px;
+    border-top: 1px solid #F5F5F5;
+    &:first-child {
+      background: #F5F5F5;
+      border-right: none;
+    }
+
+    .ant-cascader-menu-item:hover {
+      color: @theme-primary-color;
+      background: #F0F8FD;
+    }
+
+    .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+    .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
+      background: #fff;
+      color: @theme-primary-color;
+    }
+  }
+}

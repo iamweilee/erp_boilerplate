@@ -1,0 +1,77 @@
+@import "../variable.less";
+
+.@{app-prefix-cls} {
+  .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+
+    &-body {
+      padding: 24px;
+    }
+
+    &-header{
+      text-align: left;
+      padding: 24px;
+      padding-bottom: 0;
+      font-size: 16px;
+      border-bottom: none;
+    }
+
+    &-title {
+      font-size: 16px;
+      color: #333;
+    }
+
+    &-wrap {
+      text-align: center;
+      white-space: nowrap;
+      &-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        width: 0;
+      }
+    }
+
+    &-footer {
+      border-top: none;
+      .ant-btn:first-child {
+        float: right;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .ant-confirm {
+    &-body-wrapper {
+      .ant-confirm-body {
+        width: 326px;
+        white-space: normal;
+      }
+      .ant-confirm-body > .anticon {
+        font-size: 24px;
+        margin-right: 13px;
+        margin-left: 10px;
+      }
+      .anticon-question-circle:before {
+        content: "\E62C";
+        font-size: 18px;
+      }
+    }
+    &-btns {
+      .ant-btn:first-child {
+        float: right;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+

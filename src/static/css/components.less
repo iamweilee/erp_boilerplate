@@ -1,0 +1,88 @@
+/** --- 通用的小组件样式 --- */
+
+@import "./variable.less";
+
+.@{app-prefix-cls} {
+
+  // 把Button组件展示成链接样式
+  .button-like-link {
+    color: @primaryColor;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s ease;
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    &:hover {
+      background: transparent;
+      color: @primaryColor;
+    }
+
+    &.ant-btn-primary:hover, &.ant-btn-primary:focus {
+      color: @primaryColor;
+      background: transparent;
+      border-color: none;
+    }
+
+    .anticon {
+      vertical-align: text-bottom;
+    }
+
+    &:disabled {
+      color: rgba(0, 0, 0, 0.25);
+      cursor: default;
+    }
+  }
+
+  // 把Link组件展示成Button样式
+  .link-like-button {
+    color: #fff;
+    padding: 4px 18px;
+    margin: 0px;
+    span {
+      margin: 0px;
+    }
+  }
+
+  .page-crumbs {
+    color: #333333;
+    padding: 0 20px;
+    .ant-breadcrumb {
+      font-size: 14px;
+      line-height: 54px;
+      display: inline-block;
+    }
+
+    .link-like-button {
+      float: right;
+      margin-top: (54 - 28) / 2px;
+    }
+
+    .ant-breadcrumb-link {
+      font-weight: 400;
+    }
+
+    .ant-breadcrumb-separator {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 0 4px 5px;
+      border-color: transparent transparent transparent #999999;
+    }
+  }
+
+  .no-frame-alert.ant-alert {
+    display: inline;
+    border: none;
+    background: none;
+    padding-right: 0;
+    .ant-alert-icon {
+      transform: translate3d(0, -50%, 0);
+      top: 50%;
+      position: absolute;
+    }
+  }
+}

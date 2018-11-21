@@ -1,0 +1,66 @@
+@import "../../static/css/variable.less";
+
+.narrow-sider-menu {
+  .logo {
+    display: block;
+    width: 63px;
+    height: @header-height;
+    line-height: @header-height;
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+    background: url('../../static/img/logo.png');
+  }
+
+  .ant-menu {
+    background-color: #fff;
+    color: @theme-primary-color;
+    text-align: center;
+
+    &-item {
+      border: none;
+      .anticon {
+        display: block;
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      &:active {
+        background: #ECF1FC;
+      }
+      > a {
+        color: @theme-primary-color;
+        &:hover {
+          color: @theme-primary-color;
+        }
+      }
+
+      &:hover,
+      &-active {
+        background-color: #ECF1FC;
+        color: @theme-primary-color;
+      }
+    }
+
+    &-item-selected {
+      background-color: #ECF1FC;
+      color: @theme-primary-color;
+      border-right: none;
+      > a,
+      > a:hover {
+        color: @theme-primary-color;
+      }
+    }
+
+    &.ant-menu-vertical {
+      border-right: none;
+      .ant-menu-item {
+        padding: 14px;
+        line-height: 1;
+        height: auto;
+        font-size: 14px;
+        left: 0;
+      }
+    }
+  }
+}

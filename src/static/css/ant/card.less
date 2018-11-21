@@ -1,0 +1,27 @@
+@import "../variable.less";
+.@{app-prefix-cls} {
+  .ant-card {
+    &:hover {
+      box-shadow: none;
+      border-color: #E1E1E1;
+    }
+
+    &-bordered {
+      border: none;
+      border-bottom: 1px solid #E1E1E1;
+    }
+
+    &-head {
+      padding: 0 10px;
+      border-bottom: none;
+
+      &-title {
+        color: #333;
+      }
+    }
+
+    &-body {
+      padding: 16px 10px;
+    }
+  }
+}

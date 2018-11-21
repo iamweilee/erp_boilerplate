@@ -1,0 +1,21 @@
+  @import "../variable.less";
+.@{app-prefix-cls} {
+  .ant-btn {
+    &-del {
+      background-color: #CC3232;
+      border-color: #CC3232;
+      &:active, &.active {
+        background-color: #cf3131;
+        border-color: #cf3131;
+      }
+      &:hover, &:focus {
+        background-color: #c24545;
+        border-color: #c24545;
+      }
+    }
+    &-primary {
+      background-color: @theme-primary-color;
+      border-color: @theme-primary-color;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../variable.less";
+
+.@{app-prefix-cls} {
+  .ant-cascader-menu {
+    height: 270px;
+    border-top: 1px solid #F5F5F5;
+    &:first-child {
+      background: #F5F5F5;
+      border-right: none;
+    }
+
+    &-item{
+      &:hover {
+        color: @theme-primary-color;
+        background: #F0F8FD;
+      }
+
+      &-active:not(.ant-cascader-menu-item-disabled),
+      &-active:not(.ant-cascader-menu-item-disabled):hover {
+        background: #fff;
+        color: @theme-primary-color;
+      }
+    }
+  }
+}

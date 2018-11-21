@@ -1,0 +1,104 @@
+ @import "../variable.less";
+ @form-item-line-height: 28px;
+ @form-item-margin-bottom: 24px;
+
+.@{app-prefix-cls} {
+  .ant-form {
+    padding: 20px 40px;
+    background: #fff;
+
+    &-text {
+      padding-right: 16px;
+      font-size: 12px;
+    }
+
+    &-explain {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    &-item,
+    &-item-with-help {
+      margin-bottom: @form-item-margin-bottom;
+    }
+
+    &-item {
+      &-required:before {
+        color: #333;
+      }
+
+      &.form-action-button {
+        padding-left: 100px;
+      }
+
+      &.with-split:after {
+        display: inline-block;
+        content: '';
+        height: 16px;
+        border-right: 1px solid #ddd;
+        padding-right: 5px;
+        margin-right: 10px;
+        visibility: visible;
+        vertical-align: middle;
+      }
+
+      &-control-wrapper {
+        line-height: @form-item-line-height;
+        float: left;
+      }
+
+      &-control {
+        .ant-input {
+          width: 96px;
+          &.has-unit-input {
+            width: 128px;
+          }
+        }
+
+        .ant-checkbox-group {
+          max-width: 750px;
+        }
+
+        .ant-btn {
+          margin-right: 10px;
+        }
+
+        .text-area + .ant-form-explain {
+          display: block;
+        }
+      }
+
+      &-label {
+        text-align: left;
+        width: 100px;
+        float: left;
+        line-height: @form-item-line-height;
+      }
+    }
+
+
+    .search-button {
+      width: 40px;
+      font-size: 16px;
+      position: absolute;
+      left: 240px;
+      padding: 0;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .search-input {
+      width: 240px;
+      padding-right: 40px;
+
+      &.with-type {
+        padding-left: 70px;
+      }
+    }
+
+  }
+  .form-action {
+    .ant-btn {
+      margin-right: 10px;
+    }
+  }
+}

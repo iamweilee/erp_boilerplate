@@ -1,0 +1,97 @@
+/** --- 通用布局样式 --- */
+
+@import './variable.less';
+
+.@{app-prefix-cls} {
+  min-height: 600px;
+  min-width: 1280px;
+  overflow-x: scroll;
+  #app {
+    height: 100%;
+
+    // 有侧边栏的
+    .has-sider-page {
+      height: 100%;
+      .ant-layout {
+        background: @theme-container-background;
+        height: 100%;
+        &-header {
+          position: relative;
+          background: @theme-primary-color 100%;
+          padding: 0;
+          height: @layout-header-height;
+          line-height: @layout-header-height;
+          color: #fff;
+          font-size: 12px;
+
+          .logo {
+            position: absolute;
+            left: 30px;
+            font-size: 15px;
+            background: url('../img/logo.png') no-repeat left 12px;
+            padding-left: 30px;
+          }
+
+          .user-info {
+            position: absolute;
+            right: 30px;
+            top: 0;
+
+            height: @layout-header-height;
+            line-height: @layout-header-height;
+            font-size: 13px;
+            color: #fff;
+
+            .info-service-no,
+            .day {
+              margin-right: 16px;
+            }
+
+            .user-logout{
+              float: right;
+              margin-left: 8px;
+              color: #fff;
+            }
+          }
+
+        }
+
+        &-sider {
+          width: @layout-sider-width !important;
+          position: fixed;
+          bottom: 0;
+          top: @layout-header-height;
+          z-index: 99;
+          box-shadow: 0 2px 4px 0 @shadow-color;
+        }
+
+        &-content {
+          position: relative;
+          padding: 16px;
+          padding-left: @layout-sider-width + 15;
+          #content {
+            position: relative;
+            .page-crumbs {
+              background: #fff;
+              box-shadow: 0 1px 0 0 #e1e1e1;
+              margin-bottom: 10px;
+              border-bottom: none;
+            }
+            .page-container {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+
+    // 无侧边栏的
+    .no-sider-page {
+      height: 100%;
+      background: none;
+      font-size:  14px;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
